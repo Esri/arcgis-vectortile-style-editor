@@ -1,6 +1,6 @@
 {
   "name": "vtstyle-editor",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "authors": [
     "rene rubalcava <rrubalcava@esri.com>"
   ],
@@ -10,8 +10,8 @@
   "keywords": [
     "arcgis"
   ],
-  "license": "MIT",
-  "homepage": "",
+  "license": "Apache",
+  "homepage": "https://github.com/Esri/rcgis-vectortile-style-editor",
   "private": true,
   "ignore": [
     "**/.*",

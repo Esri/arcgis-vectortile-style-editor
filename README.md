@@ -6,14 +6,6 @@ This is a simple Vector Tile Style Editor to update the styles of [Esri Vector B
 
 ![App](https://raw.github.com/Esri/arcgis-vectortile-style-editor/master/vt-edit-demo.gif)
 
-## Features
-* Basemaps - Set different basemaps interactively
-* Geolocation - Find and display your geolocation
-* Place Finding - Find places or geocode an address
-* Directions - Get directions
-* Graphics - Draw points, lines and polygons
-* Cloud - Draw and query features stored in the ArcGIS Online cloud
-
 ## Usage
 When using the Vector Tile Style Editor, you will be prompted to log in to your ArcGIS Online account.
 If you have not already copied a style to your account, you can follow the [instructions here](http://blogs.esri.com/esri/arcgis/2015/11/19/how-to-customize-esri-vector-basemaps/).
@@ -21,6 +13,17 @@ If you have not already copied a style to your account, you can follow the [inst
 ## Requirements
 
 * [ArcGIS Online](http://www.arcgis.com/features/) or free [ArcGIS Developer Account](https://developers.arcgis.com/en/).
+
+## 3rd-Party Libraries
+
+[Ace Editor](https://ace.c9.io/)
+[Esri Calcite Bootstrap](https://github.com/Esri/calcite-bootstrap)
+[Esri Dojo Theme Flat](https://github.com/Esri/dojo-theme-flat)
+[jQuery](https://jquery.com/)
+[jQuery Split Pane Plugin](https://github.com/shagstrom/split-pane)
+[jQuery Spectrum Color Picker](https://github.com/bgrins/spectrum)
+[jQuery toastr plugin](https://github.com/CodeSeven/toastr)
+
 
 ## Resources
 
