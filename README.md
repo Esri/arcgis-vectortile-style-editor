@@ -16,14 +16,19 @@ If you have not already copied a style to your account, you can follow the [inst
 
 ## 3rd-Party Libraries
 
-[Ace Editor](https://ace.c9.io/)
-[Esri Calcite Bootstrap](https://github.com/Esri/calcite-bootstrap)
-[Esri Dojo Theme Flat](https://github.com/Esri/dojo-theme-flat)
-[jQuery](https://jquery.com/)
-[jQuery Split Pane Plugin](https://github.com/shagstrom/split-pane)
-[jQuery Spectrum Color Picker](https://github.com/bgrins/spectrum)
-[jQuery toastr plugin](https://github.com/CodeSeven/toastr)
+[Ace Editor](https://ace.c9.io/) licensed under [BSD](https://github.com/ajaxorg/ace/blob/master/LICENSE).
 
+[Esri Calcite Bootstrap](https://github.com/Esri/calcite-bootstrap) licensed under [Apache 2.0](https://github.com/Esri/calcite-bootstrap/blob/master/license.txt).
+
+[Esri Dojo Theme Flat](https://github.com/Esri/dojo-theme-flat) licenced under [Apache 2.0](https://github.com/Esri/dojo-theme-flat/blob/master/license.txt).
+
+[jQuery](https://jquery.com/) [Copyright jQuery Foundation and other contributors, https://jquery.org/](https://github.com/jquery/jquery/blob/master/LICENSE.txt).
+
+[jQuery Split Pane Plugin](https://github.com/shagstrom/split-pane) [Copyright (c) 2014 - 2015 Simon Hagström](https://github.com/shagstrom/split-pane/blob/master/LICENSE).
+
+[jQuery Spectrum Color Picker](https://github.com/bgrins/spectrum) [License](https://github.com/bgrins/spectrum/blob/master/LICENSE).
+
+[jQuery toastr plugin](https://github.com/CodeSeven/toastr) licensed under [MIT](http://www.opensource.org/licenses/mit-license.php).
 
 ## Resources
 
