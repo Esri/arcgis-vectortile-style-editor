@@ -1,0 +1,191 @@
+html, body, #map, #editor, #map-container {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FFF;
+  overflow: hidden;
+}
+
+#main-container {
+  display: none;
+  position: absolute;
+  top: 100px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+#editor {
+  width: 50%;
+}
+
+#map-container {
+  left: 50%;
+}
+
+#map {
+  width: 100%;
+}
+
+#mapName {
+  background: #fff;
+  color: #000;
+  opacity: 0.5;
+  width: 100%;
+  height: auto;
+  line-height: 75%;
+  margin: 0 0;
+  padding: 2px;
+  position: absolute;
+  z-index: 999;
+  text-align: center;
+}
+
+#edit {
+  height: 100%;
+  width: 100%;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+#header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100px;
+  background-color: #33A02C;
+}
+
+#search {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  right: 10px;
+}
+
+#search-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.search-min {
+  width: 42px;
+}
+
+.search-max {
+  width: 50%;
+}
+
+.search-addon {
+  cursor: pointer;
+}
+
+#editsearch {
+  width: 100%;
+}
+
+.header-container {
+  padding: 25px;
+}
+
+.split-pane {
+  height: unset !important;
+}
+
+.split-pane-divider {
+  background-color: #595959;
+  left: 50%; /* Same as left component width */
+  width: 3px;
+}
+
+.split-pane-divider:hover {
+  width: 5px;
+}
+
+#style-editor-actions {
+  display: none;
+}
+
+#notice-container {
+  display: none;
+  margin: 20% auto;
+  width: 500px;
+}
+
+#signout {
+  display: none;
+  margin-right: 25px;
+}
+
+#items-container {
+  display: block;
+  position: relative;
+  top: 150px;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+#item-list {
+  margin-left: 25%;
+  margin-right: 25%;
+  display: block;
+  list-style-type: none;
+}
+
+#item-list li {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: #000 solid 1px;
+
+}
+
+#item-list li section {
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+}
+
+.item-thumb {
+  position: relative;
+  background-size: cover;
+  width: 200px;
+  height: 133px;
+  color: #fff;
+  background-color: #595959;
+  font-size: 0.7em;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.item-thumb:hover {
+  opacity: 0.8;
+}
+
+.item-thumb .item-title {
+  position: absolute;
+  margin: 0 0;
+  text-align: center;
+  width: 100%;
+}
+
+.item-thumb .item-owner {
+  position: absolute;
+  bottom: 0;
+  margin: 0 0;
+  text-align: center;
+  width: 100%;
+}
+
+.item-details {
+  font-size: 0.7em;
+}

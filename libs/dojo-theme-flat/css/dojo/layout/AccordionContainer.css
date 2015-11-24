@@ -1,0 +1,149 @@
+/* Accordion
+ * 
+ * Styling AccordionContainer basically means styling the accordion pane (dijitAccordionInnerContainer)
+ * and the title inside of it (dijitAccordionTitle).   There are 4 basic states to style:
+ * 
+ * 1. closed pane (and default styling): 
+ * 		.dijitAccordionInnerContainer - container for each accordion child
+ * 		.dijitAccordionTitle - title for each accordion child
+ *
+ * 2. active closed pane (ie, mouse down on a title bar)
+ * 		.dijitAccordionInnerContainerActive - for background-color, border
+ * 		.dijitAccordionInnerContainerActive dijitAccordionTitle - for text color
+ * 
+ * 3. open pane (expanded child)
+ *		.dijitAccordionChildWrapper - wraps around the child widget (typically ContentPane)
+ *			setting a margin so that there's blue trim all the way around the child
+ *
+ * 		These rules need to override the closed pane active:
+ *
+ * 		.dijitAccordionInnerContainerSelected - for background-color, border
+ * 		.dijitAccordionInnerContainerSelected .dijitAccordionTitle - for text color
+ * 
+ * 4. hovered pane, open or closed
+ * 		The selectors below affect hovering over both a closed pane (ie, hovering a title bar),
+ * 		and hovering over an open pane.   Also, treat mouse down on an open pane as a hover:
+ *
+ * 		.dijitAccordionInnerContainerHover, .dijitAccordionInnerContainerSelectedActive - for background-color, border
+ * 		.dijitAccordionInnerContainerHover .dijitAccordionTitle - for text color
+ */
+.dijitAccordionContainer {
+  border: 0 none;
+  border-radius: 2px;
+}
+.dijitAccordionInnerContainer {
+  background: transparent;
+  border: 1px solid #d0d0d0;
+  border-radius: 2px;
+  transition-property: background-color, border;
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+}
+.dijitAccordionInnerContainer +.dijitAccordionInnerContainer {
+  margin-top: 0px;
+  position: relative;
+}
+/* title bar */
+.dijitAccordionTitle {
+  padding: 4px 12px;
+  border-radius: 2px;
+  box-shadow: none;
+  line-height: 20px;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+  cursor: pointer;
+  border: 1px solid #d0d0d0;
+  background: #f5f5f5;
+  background: linear-gradient(#f5f5f5, #f5f5f5);
+  border: 0 none;
+  border-radius: 2px;
+}
+.dijitAccordionTitle .arrowTextUp,
+.dijitAccordionTitle .arrowTextDown {
+  display: none;
+  float: right;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  text-decoration: inherit;
+  vertical-align: bottom;
+  text-align: center;
+  font-size: 0px;
+}
+.dijitAccordionTitle .arrowTextUp:before,
+.dijitAccordionTitle .arrowTextDown:before {
+  content: "\f078";
+  font-size: 12px;
+}
+.dijitAccordionTitle .arrowTextUp {
+  display: block;
+}
+.dijitAccordionTitle .arrowTextUp:before {
+  content: "\f077";
+}
+/* Hover */
+.dijitAccordionInnerContainerHover .dijitAccordionTitle {
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+  transition: all 0.1s;
+  background: #e1e1e1;
+  background: linear-gradient(#f6f6f6, #e1e1e1);
+}
+/* Active */
+.dijitAccordionInnerContainerActive .dijitAccordionTitle {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25) inset;
+  transition: none;
+  outline: none;
+  background: #d0d0d0;
+  background: linear-gradient(#f5f5f5, #f5f5f5);
+}
+/* Selected */
+.dijitAccordionInnerContainerSelected {
+  border: 0 none;
+}
+.dijitAccordionInnerContainerSelected .dijitAccordionTitle {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+  background: #007ac2;
+  box-shadow: 0 1px 3px -2px rgba(0,0,0,0.3);
+  border-radius: 2px 2px 0 0;
+}
+.dijitAccordionInnerContainerSelected .dijitAccordionTitle .arrowTextUp {
+  display: none;
+}
+.dijitAccordionInnerContainerSelected .dijitAccordionTitle .arrowTextDown {
+  display: block;
+}
+/* content wrapper */
+.dijitAccordionContainer .dijitAccordionChildWrapper {
+  background-color: #fff;
+  border: 1px solid #d0d0d0;
+  border-top: 0 none;
+  position: relative;
+  z-index: 1;
+  clear: both;
+  border-radius: 0 0 2px 2px;
+}
+/* if the spacing between panes is 0 */
+.dijitAccordionInnerContainer {
+  border-radius: 0;
+}
+.dijitAccordionInnerContainer .dijitAccordionTitle {
+  border-radius: 0;
+}
+.dijitAccordionInnerContainer:not(:last-child) .dijitAccordionChildWrapper {
+  border-radius: 0;
+}
+.dijitAccordionInnerContainer +.dijitAccordionInnerContainer {
+  border-top: 0 none;
+}
+.dijitAccordionInnerContainer +.dijitAccordionInnerContainerSelected:last-child .dijitAccordionTitle {
+  border-radius: 0;
+}
+.dijitAccordionInnerContainer:first-child,
+.dijitAccordionInnerContainer:first-child .dijitAccordionTitle {
+  border-radius: 2px 2px 0 0;
+}
+.dijitAccordionInnerContainer:last-child,
+.dijitAccordionInnerContainer:last-child .dijitAccordionTitle {
+  border-radius: 0 0 2px 2px;
+}

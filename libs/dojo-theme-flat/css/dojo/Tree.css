@@ -1,0 +1,158 @@
+/* Tree 
+ * 
+ * Styling Tree mostly means styling the TreeRow (dijitTreeRow)
+ * There are 4 basic states to style:
+ * 
+ * Tree Row:
+ * 1. tree row (default styling): 
+ * 		.dijitTreeRow - styles for each row of the tree
+ *
+ * 2. hovered tree row (mouse hover on a tree row)
+ * 		.dijitTreeRowHover - styles when mouse over on one row
+ * 
+ * 3. active tree row (mouse down on a tree row)
+ * 		.dijitTreeRowActive - styles when mouse down on one row
+ * 
+ * 4. selected tree row
+ * 		dijitTreeRowSelected - style when the row has been selected
+ * 
+ * Tree Expando:
+ * 	    dijitTreeExpando - the expando at the left of the text of each tree row
+ * 
+ * Drag and Drop on TreeNodes: (insert line on dijitTreeContent node so it'll aligned w/ target element)
+ * 		.dijitTreeNode .dojoDndItemBefore/.dojoDndItemAfter - use border style simulate a separate line
+ */
+.dijitTreeIsRoot {
+  background: transparent;
+}
+.dijitTreeRow,
+.dijitTreeNode .dojoDndItemBefore,
+.dijitTreeNode .dojoDndItemAfter {
+  padding: 8px 0;
+  border: 0 none;
+  line-height: 20px;
+  transition-property: background-color, border-color;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-out;
+}
+/* Hover */
+.dijitTreeRowHover {
+  background: #f5f5f5;
+  border: 0 none;
+  transition-duration: 0.15s;
+}
+/* Active */
+.dijitTreeRowActive {
+  background: #f5f5f5;
+  border: 0 none;
+}
+/* Selected */
+.dijitTreeRowSelected,
+.dijitTreeRowHover.dijitTreeRowSelected,
+.dijitTreeRowActive.dijitTreeRowSelected {
+  color: #fff;
+  background: #007ac2;
+  border: 0 none;
+}
+/* Focused */
+/*
+.dijitTreeRowFocused {
+}
+*/
+/* expando (open/closed) icon */
+.dijitTreeExpando {
+  font-family: FontAwesome;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  font-size: 12px;
+  text-align: center;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.dijitTreeExpandoOpened:before {
+  content: "\f078";
+  cursor: pointer;
+}
+.dijitTreeExpandoClosed:before {
+  content: "\f054";
+  cursor: pointer;
+}
+/*
+.dijitTreeRowHover .dijitTreeExpandoOpened {
+}
+
+.dijitTreeRowHover .dijitTreeExpandoClosed {
+}
+*/
+.dijitTreeExpandoLoading:before {
+  content: "\f021";
+  animation: spinning 2s linear infinite;
+}
+.dj_ie8 .dijitTreeExpandoLoading,
+.dj_ie9 .dijitTreeExpandoLoading {
+  background: url("images/loadingAnimation.gif") no-repeat;
+}
+.dj_ie8 .dijitTreeExpandoLoading:before,
+.dj_ie9 .dijitTreeExpandoLoading:before {
+  content: "";
+}
+/* DnD */
+/* No Nodes with class name "dojoDndItemBefore" or "dojoDndItemAfter"
+   found when dragging a tree node?! 
+*/
+/*
+.dijitTreeNode {
+	.dojoDndItemBefore .dijitTreeContent {
+		border-top: 2px solid $dnd-avatar-item-insert-indicator-color;
+	}
+	.dojoDndItemAfter .dijitTreeContent {
+		border-bottom: 2px solid $dnd-avatar-item-insert-indicator-color;
+	}
+}
+*/
+@-moz-keyframes spinning {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spinning {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spinning {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-ms-keyframes spinning {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinning {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

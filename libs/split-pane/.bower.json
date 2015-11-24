@@ -1,0 +1,33 @@
+{
+  "name": "split-pane",
+  "main": [
+    "split-pane.js",
+    "split-pane.css"
+  ],
+  "version": "0.5.1",
+  "homepage": "https://github.com/shagstrom/split-pane",
+  "authors": [
+    "Simon Hagström <simon.hagstrom@gmail.com>"
+  ],
+  "description": "jQuery Split Pane plugin",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~1.11.1"
+  },
+  "ignore": [
+    "**/.*",
+    "examples",
+    "README.md",
+    "bower_components"
+  ],
+  "_release": "0.5.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.5.1",
+    "commit": "a03c9cf3b98d3376b82a4aafad21b07ef832305c"
+  },
+  "_source": "git://github.com/shagstrom/split-pane.git",
+  "_target": "~0.5.1",
+  "_originalSource": "split-pane",
+  "_direct": true
+}

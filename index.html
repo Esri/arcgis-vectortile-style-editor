@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+    <title>VectorTile Style Simple Editor</title>
+    <link rel="stylesheet" href="libs/dojo-theme-flat/css/dojo/flat.css">
+    <link rel="stylesheet" href="https://js.arcgis.com/3.15/esri/css/esri.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="libs/calcite/css/calcite-bootstrap.css">
+    <link rel="stylesheet" href="libs/split-pane/split-pane.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.7.1/spectrum.css">
+    <link rel="stylesheet" href="https//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.2/toastr.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="dojoConfig.js"></script>
+    <script src="https://js.arcgis.com/3.15/"></script>
+  </head>
+
+  <body class="claro">
+
+    <div id="header" class="row">
+      <div class="header-container">
+        <button id="signout" class="btn btn-danger pull-left">Sign Out</button>
+        <div id="style-editor-actions">
+          <button id="submit" class="btn btn-primary">Apply Style</button>
+          <button id="undo" class="btn btn-info">Undo</button>
+          <button id="reset" class="btn btn-danger">Reset</button>
+          <button id="save" class="btn btn-success">Save</button>
+          <button type="button" class="btn btn-info" data-toggle="popover" data-html="true" title="Keyboard shortcuts" data-content="Ctrl+s to apply style.<br/>Ctrl+z to undo applied style">?</button>
+          <input id='colorpicker' />
+           <a class="pull-right" href="https://www.mapbox.com/mapbox-gl-style-spec/" target="_blank">Style Reference</a>
+        </div>
+      </div>
+    </div>
+    <div id="main-container" class="split-pane fixed-left">
+      <div id="editor" class="split-pane-component"">
+        <div id="edit"></div>
+      </div>
+      <div id="my-divider" class="split-pane-divider"></div>
+      <div id="map-container" class="split-pane-component">
+        <div id="mapName"></div>
+        <div id="search"></div>
+        <div id="map"></div>
+      </div>
+    </div>
+
+    <div id="items-container">
+      <ul id="item-list"></ul>
+    </div>
+
+    <div id="notice-container"></div>
+
+  </body>
+</html>

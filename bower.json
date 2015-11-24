@@ -1,0 +1,27 @@
+{
+  "name": "vtstyle-editor",
+  "version": "0.0.1",
+  "authors": [
+    "rene rubalcava <rrubalcava@esri.com>"
+  ],
+  "description": "Simple Vector Tile Style Editor",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "arcgis"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "split-pane": "~0.5.1"
+  }
+}
