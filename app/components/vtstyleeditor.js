@@ -15,7 +15,7 @@ define([
   Editor,
   portalItem,
   portalStyle,
-  save,
+  saveStyle,
   StyleHandlers
 ) {
 
@@ -26,6 +26,7 @@ define([
     this.styleHistory = [];
 
     topic.subscribe('update-layer-style', this._updateLayerStyle.bind(this));
+    topic.subscribe('save-style', this._saveLayerStyle.bind(this));
   }
 
   VTSyleEditor.prototype.start = function start() {
@@ -65,6 +66,14 @@ define([
 
   VTSyleEditor.prototype._updateLayerStyle = function updateLayerStyle(data) {
     this.layer.setStyle(data);
+  };
+
+  VTSyleEditor.prototype._saveLayerStyle = function saveLayerStyle(data) {
+    saveStyle(this.portal, this.item, data).then(function(results) {
+      console.log(results);
+    }).otherwise(function(err) {
+      console.log('Error in saving style: ', err);
+    });
   };
 
   return VTSyleEditor;
