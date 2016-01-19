@@ -8,8 +8,6 @@ define([
 
   function loadHandlers(initialStyle) {
 
-    console.log('initial style', initialStyle);
-
     var initialStyleString = JSON.stringify(initialStyle, null, '\t');
 
     var layer = this.layer;

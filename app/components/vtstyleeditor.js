@@ -70,7 +70,7 @@ define([
 
   VTSyleEditor.prototype._saveLayerStyle = function saveLayerStyle(data) {
     saveStyle(this.portal, this.item, data).then(function(results) {
-      console.log(results);
+      console.log('Save Successful: ', results);
     }).otherwise(function(err) {
       console.log('Error in saving style: ', err);
     });

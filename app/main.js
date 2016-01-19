@@ -69,7 +69,7 @@ define([
     .then(startApplication)
     .otherwise(
       function () {
-        console.log('otherwise');
+        console.log('Get credentials');
         esriId.getCredential(info.portalUrl)
           .then(startApplication);
       }
@@ -84,7 +84,6 @@ define([
     portal.signIn().then(function() {
 
       domUtils.show(signoutBtn);
-      console.log(user);
       if (itemid) {
         initStyleEditor(portalUrl, itemid);
       } else {
@@ -93,16 +92,13 @@ define([
           //q: 'type:"vector tiles"',
           num: 100
         }).then(function (items) {
-          console.log('found items', items);
           if (items.results.length) {
             var list = new ItemList({ data: items.results, node: itemsList });
             list.start();
 
             on(itemsList, '.item-thumb:click', function (e) {
               e.preventDefault();
-              console.log('item clicked', e.target);
               var id = e.target.getAttribute('data-itemid');
-              console.log('itemid', id);
               if (id) {
                 initStyleEditor(portalUrl, id);
               }

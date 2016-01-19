@@ -18,9 +18,7 @@ define([
       elem.innerHTML = elemString;
       if (x.thumbnailUrl) {
         var thumb = elem.firstChild.querySelector('.item-thumb');
-        console.log(thumb, elem);
         thumb.style.backgroundImage = 'url(' + x.thumbnailUrl + ')';
-        console.log(thumb, x.thumbnailUrl);
       }
       docFrag.appendChild(elem.firstChild);
     });
