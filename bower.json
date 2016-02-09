@@ -11,7 +11,7 @@
     "arcgis"
   ],
   "license": "Apache",
-  "homepage": "https://github.com/Esri/rcgis-vectortile-style-editor",
+  "homepage": "https://github.com/Esri/arcgis-vectortile-style-editor",
   "private": true,
   "ignore": [
     "**/.*",
