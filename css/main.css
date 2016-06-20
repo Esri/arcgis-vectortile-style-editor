@@ -126,8 +126,7 @@ body {
 }
 
 #items-container {
-  display: block;
-  position: relative;
+  position: absolute;
   top: 150px;
   bottom: 0;
   overflow-y: auto;
