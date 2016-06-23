@@ -130,6 +130,8 @@ body {
   top: 150px;
   bottom: 0;
   overflow-y: auto;
+  right: 1em;
+  left: 1em;
 }
 
 #item-list {
@@ -137,6 +139,7 @@ body {
   margin-right: 25%;
   display: block;
   list-style-type: none;
+  /* width: 100%; */
 }
 
 #item-list li {
@@ -159,7 +162,7 @@ body {
   background-size: cover;
   width: 200px;
   height: 133px;
-  color: #fff;
+  color: #6791b7;
   background-color: #595959;
   font-size: 0.7em;
   cursor: pointer;
@@ -187,4 +190,5 @@ body {
 
 .item-details {
   font-size: 0.7em;
+  width: 100%;
 }

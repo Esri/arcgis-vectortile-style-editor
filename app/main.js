@@ -88,7 +88,7 @@ define([
         initStyleEditor(portalUrl, itemid);
       } else {
         portal.queryItems({
-          q: 'type:"Vector Tile Service", owner:"' + user.userId + '"',
+          q: '(type:"Vector Tile Service", owner:"' + user.userId + '") AND NOT typekeywords:"Hosted"',
           //q: 'type:"vector tiles"',
           num: 100
         }).then(function (items) {
